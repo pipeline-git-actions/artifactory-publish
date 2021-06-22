@@ -1,12 +1,12 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'Artifactory Publish Task'
+description: 'Github Actions for publishing artifacts to artifactory.'
+author: 'Linjith'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  includePattern:
+    description: 'Include Pattern'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.includePattern }}
